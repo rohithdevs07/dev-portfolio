@@ -1,0 +1,4648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="img/code_1157109.png">
+   <title>
+     Rohith | Developer
+    </title>
+
+
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <style>
+
+       
+
+        :root {
+
+            --bg: #050505;
+            --bg2: #0a0a0a;
+            --card: #101010;
+
+            --white: #f5f5f5;
+
+            --gray: #888;
+
+            --gray2: #555;
+
+            --border:
+                rgba(255,255,255,0.10);
+
+            --heading:
+                "Space Grotesk",
+                sans-serif;
+
+            --font:
+                "Inter",
+                sans-serif;
+
+            --max:
+                1250px;
+        }
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            background:
+                var(--bg);
+
+            color:
+                var(--white);
+
+            font-family:
+                var(--font);
+
+            overflow-x:
+                hidden;
+        }
+
+
+        a {
+
+            color:
+                inherit;
+
+            text-decoration:
+                none;
+        }
+
+
+        button,
+        input,
+        textarea {
+
+            font-family:
+                inherit;
+        }
+
+
+        ::-webkit-scrollbar {
+
+            width:
+                7px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+
+            background:
+                #000;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+
+            background:
+                #444;
+        }
+
+
+
+
+        .navbar {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            z-index:
+                1000;
+
+            background:
+                rgba(5,5,5,0.8);
+
+            backdrop-filter:
+                blur(20px);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .nav-container {
+
+            max-width:
+                var(--max);
+
+            height:
+                80px;
+
+            margin:
+                auto;
+
+            padding:
+                0 30px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+        }
+
+
+        .logo {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                26px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                -1px;
+        }
+
+
+        .logo span {
+
+            color:
+                #777;
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                30px;
+        }
+
+
+        .nav-links a {
+
+            font-size:
+                11px;
+
+            color:
+                #888;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                white;
+        }
+
+
+        .nav-button {
+
+            border:
+                1px solid #444;
+
+            padding:
+                11px 20px;
+
+            font-size:
+                11px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .nav-button:hover {
+
+            background:
+                white;
+
+            color:
+                black;
+        }
+
+
+        .menu-button {
+
+            display:
+                none;
+
+            background:
+                transparent;
+
+            border:
+                0;
+
+            color:
+                white;
+
+            font-size:
+                24px;
+
+            cursor:
+                pointer;
+        }
+
+
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+        }
+
+
+        .hero-bg {
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+
+                radial-gradient(
+                    circle at 75% 40%,
+                    rgba(255,255,255,0.07),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(255,255,255,0.04),
+                    transparent 30%
+                );
+        }
+
+
+        .hero-container {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            width:
+                100%;
+
+            max-width:
+                var(--max);
+
+            margin:
+                auto;
+
+            padding:
+                130px 30px 80px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.1fr 0.9fr;
+
+            gap:
+                80px;
+
+            align-items:
+                center;
+        }
+
+
+        .hero-small {
+
+            color:
+                #666;
+
+            font-size:
+                11px;
+
+            letter-spacing:
+                4px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                clamp(55px, 8vw, 110px);
+
+            line-height:
+                0.88;
+
+            letter-spacing:
+                -6px;
+
+            margin-bottom:
+                30px;
+        }
+
+
+        .hero h1 span {
+
+            display:
+                block;
+
+            color:
+                #666;
+        }
+
+
+        .hero-role {
+
+            min-height:
+                35px;
+
+            font-size:
+                22px;
+
+            font-weight:
+                500;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .cursor {
+
+            animation:
+                blink 0.8s infinite;
+
+            color:
+                #777;
+        }
+
+
+        @keyframes blink {
+
+            0%,50% {
+
+                opacity:
+                    1;
+            }
+
+            51%,100% {
+
+                opacity:
+                    0;
+            }
+        }
+
+
+        .hero-description {
+
+            max-width:
+                600px;
+
+            color:
+                var(--gray);
+
+            line-height:
+                1.8;
+
+            font-size:
+                15px;
+
+            margin-bottom:
+                35px;
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        .primary-button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            background:
+                white;
+
+            color:
+                black;
+
+            border:
+                1px solid white;
+
+            padding:
+                15px 22px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                600;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.3s;
+        }
+
+
+        .primary-button:hover {
+
+            background:
+                transparent;
+
+            color:
+                white;
+        }
+
+
+        .secondary-button {
+
+            padding:
+                15px 22px;
+
+            border:
+                1px solid #444;
+
+            font-size:
+                12px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .secondary-button:hover {
+
+            border-color:
+                white;
+        }
+
+
+
+        
+
+        .code-window {
+
+            background:
+                #0b0b0b;
+
+            border:
+                1px solid #242424;
+
+            box-shadow:
+                0 40px 100px
+                rgba(0,0,0,0.5);
+
+            transform:
+                rotate(2deg);
+
+            transition:
+                0.5s;
+        }
+
+
+        .code-window:hover {
+
+            transform:
+                rotate(0deg)
+                translateY(-10px);
+        }
+
+
+        .window-header {
+
+            height:
+                45px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            padding:
+                0 15px;
+
+            position:
+                relative;
+
+            border-bottom:
+                1px solid #222;
+        }
+
+
+        .window-header p {
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            transform:
+                translateX(-50%);
+
+            color:
+                #666;
+
+            font-size:
+                11px;
+        }
+
+
+        .window-dots {
+
+            display:
+                flex;
+
+            gap:
+                6px;
+        }
+
+
+        .window-dots span {
+
+            width:
+                8px;
+
+            height:
+                8px;
+
+            background:
+                #444;
+
+            border-radius:
+                50%;
+        }
+
+
+        .code-content {
+
+            padding:
+                30px;
+
+            overflow-x:
+                auto;
+        }
+
+
+        .code-content pre {
+
+            font-family:
+                monospace;
+
+            font-size:
+                13px;
+
+            line-height:
+                2;
+
+            color:
+                #aaa;
+        }
+
+
+        .purple {
+
+            color:
+                #c792ea;
+        }
+
+
+        .blue {
+
+            color:
+                #82aaff;
+        }
+
+
+        .green {
+
+            color:
+                #c3e88d;
+        }
+
+
+
+        /* =========================
+           SCROLL INDICATOR
+        ========================== */
+
+        .scroll-indicator {
+
+            position:
+                absolute;
+
+            bottom:
+                30px;
+
+            left:
+                50%;
+
+            transform:
+                translateX(-50%);
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            color:
+                #555;
+
+            font-size:
+                8px;
+
+            letter-spacing:
+                2px;
+        }
+
+
+        .scroll-line {
+
+            height:
+                45px;
+
+            width:
+                1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #777,
+                    transparent
+                );
+        }
+
+
+
+      
+        .section {
+
+            padding:
+                140px 0;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .container {
+
+            max-width:
+                var(--max);
+
+            margin:
+                auto;
+
+            padding:
+                0 30px;
+        }
+
+
+        .section-heading {
+
+            margin-bottom:
+                80px;
+        }
+
+
+        .section-number {
+
+            font-size:
+                10px;
+
+            color:
+                #666;
+
+            letter-spacing:
+                3px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                clamp(45px,6vw,80px);
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -4px;
+        }
+
+
+        .section-heading h2 span {
+
+            display:
+                block;
+
+            color:
+                #555;
+        }
+
+
+        .heading-description {
+
+            max-width:
+                500px;
+
+            color:
+                #777;
+
+            line-height:
+                1.7;
+
+            margin-top:
+                25px;
+        }
+
+
+
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                100px;
+        }
+
+
+        .about-text p {
+
+            color:
+                #888;
+
+            line-height:
+                1.9;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .about-text .large-text {
+
+            color:
+                white;
+
+            font-size:
+                24px;
+
+            line-height:
+                1.5;
+        }
+
+
+        .about-text strong {
+
+            color:
+                white;
+        }
+
+
+        .about-stats {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                15px;
+        }
+
+
+        .stat-card {
+
+            padding:
+                30px;
+
+            background:
+                #0b0b0b;
+
+            border:
+                1px solid var(--border);
+
+            transition:
+                0.3s;
+        }
+
+
+        .stat-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #555;
+        }
+
+
+        .stat-card > span {
+
+            color:
+                #555;
+
+            font-size:
+                11px;
+        }
+
+
+        .stat-card h3 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                23px;
+
+            margin-top:
+                30px;
+        }
+
+
+        .stat-card p {
+
+            color:
+                #777;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+
+            margin-top:
+                10px;
+        }
+
+
+
+
+        .skills-section {
+
+            background:
+                #090909;
+        }
+
+
+        .skills-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                20px;
+        }
+
+
+        .skill-category {
+
+            min-height:
+                280px;
+
+            padding:
+                30px;
+
+            background:
+                #0d0d0d;
+
+            border:
+                1px solid var(--border);
+
+            transition:
+                0.3s;
+        }
+
+
+        .skill-category:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #555;
+        }
+
+
+        .category-number {
+
+            color:
+                #555;
+
+            font-size:
+                11px;
+
+            margin-bottom:
+                45px;
+        }
+
+
+        .skill-category h3 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                24px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .skill-list {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                14px;
+        }
+
+
+        .skill {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            padding-bottom:
+                12px;
+
+            border-bottom:
+                1px solid #202020;
+        }
+
+
+        .skill span {
+
+            font-size:
+                13px;
+        }
+
+
+        .skill small {
+
+            color:
+                #555;
+
+            font-size:
+                9px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+        }
+
+
+
+
+        .backend-section {
+
+            padding:
+                150px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111,
+                    #050505,
+                    #0e0e0e
+                );
+        }
+
+
+        .backend-content {
+
+            max-width:
+                1100px;
+        }
+
+
+        .backend-content h2 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                clamp(45px,7vw,90px);
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -5px;
+        }
+
+
+        .backend-content h2 span {
+
+            display:
+                block;
+
+            color:
+                #555;
+        }
+
+
+        .backend-content > p {
+
+            max-width:
+                650px;
+
+            color:
+                #777;
+
+            line-height:
+                1.8;
+
+            margin-top:
+                30px;
+        }
+
+
+        .backend-points {
+
+            margin-top:
+                80px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                30px;
+        }
+
+
+        .backend-points div {
+
+            border-top:
+                1px solid #333;
+
+            padding-top:
+                20px;
+        }
+
+
+        .backend-points span {
+
+            color:
+                #555;
+
+            font-size:
+                11px;
+        }
+
+
+        .backend-points h3 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                22px;
+
+            margin-top:
+                30px;
+        }
+
+
+        .backend-points p {
+
+            color:
+                #777;
+
+            line-height:
+                1.7;
+
+            font-size:
+                13px;
+
+            margin-top:
+                10px;
+        }
+
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects-section {
+
+            background:
+                #070707;
+        }
+
+
+        .projects-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                20px;
+        }
+
+
+        .project-card {
+
+            min-height:
+                450px;
+
+            padding:
+                30px;
+
+            background:
+                #0c0c0c;
+
+            border:
+                1px solid var(--border);
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            transition:
+                0.4s;
+        }
+
+
+        .project-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #555;
+        }
+
+
+        .project-top {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+        }
+
+
+        .project-number {
+
+            color:
+                #555;
+
+            font-size:
+                11px;
+        }
+
+
+        .project-status {
+
+            color:
+                #666;
+
+            border:
+                1px solid #333;
+
+            padding:
+                6px 8px;
+
+            font-size:
+                8px;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .project-card h3 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                27px;
+
+            margin-top:
+                60px;
+        }
+
+
+        .project-card > p {
+
+            color:
+                #777;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+
+            margin-top:
+                15px;
+        }
+
+
+        .project-tech {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                8px;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                40px;
+        }
+
+
+        .project-tech span {
+
+            color:
+                #999;
+
+            border:
+                1px solid #333;
+
+            padding:
+                7px 10px;
+
+            font-size:
+                9px;
+        }
+
+
+        .project-links {
+
+            display:
+                flex;
+
+            gap:
+                20px;
+
+            margin-top:
+                30px;
+
+            padding-top:
+                20px;
+
+            border-top:
+                1px solid #222;
+        }
+
+
+        .project-links a {
+
+            color:
+                #888;
+
+            font-size:
+                10px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .project-links a:hover {
+
+            color:
+                white;
+        }
+
+
+        .project-note {
+
+            margin-top:
+                30px;
+
+            padding:
+                25px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+
+            color:
+                #666;
+
+            border:
+                1px dashed #333;
+        }
+
+
+        .project-note span {
+
+            font-size:
+                25px;
+        }
+
+
+
+        .journey-section {
+
+            background:
+                #090909;
+        }
+
+
+        .timeline {
+
+            max-width:
+                950px;
+        }
+
+
+        .timeline-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                100px 1fr;
+
+            gap:
+                50px;
+
+            padding:
+                50px 0;
+
+            border-top:
+                1px solid #222;
+        }
+
+
+        .timeline-number {
+
+            color:
+                #555;
+
+            font-size:
+                11px;
+        }
+
+
+        .timeline-label {
+
+            color:
+                #555;
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                3px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .timeline-content h3 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                30px;
+        }
+
+
+        .timeline-content p:last-child {
+
+            max-width:
+                650px;
+
+            color:
+                #777;
+
+            line-height:
+                1.7;
+
+            margin-top:
+                15px;
+        }
+
+
+
+        
+
+        .contact-section {
+
+            padding:
+                150px 0;
+
+            background:
+                #050505;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .contact-wrapper {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                100px;
+        }
+
+
+        .contact-heading h2 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                clamp(50px,7vw,90px);
+
+            line-height:
+                0.9;
+
+            letter-spacing:
+                -5px;
+        }
+
+
+        .contact-heading h2 span {
+
+            display:
+                block;
+
+            color:
+                #555;
+        }
+
+
+        .contact-heading > p:last-child {
+
+            max-width:
+                450px;
+
+            color:
+                #777;
+
+            line-height:
+                1.8;
+
+            margin-top:
+                30px;
+        }
+
+
+        .contact-details {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+        }
+
+
+        .contact-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                45px 1fr 20px;
+
+            gap:
+                15px;
+
+            align-items:
+                center;
+
+            padding:
+                20px 0;
+
+            border-bottom:
+                1px solid #222;
+
+            transition:
+                0.3s;
+        }
+
+
+        .contact-item:hover {
+
+            padding-left:
+                10px;
+        }
+
+
+        .contact-icon {
+
+            width:
+                35px;
+
+            height:
+                35px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border:
+                1px solid #333;
+
+            font-size:
+                9px;
+        }
+
+
+        .contact-item small {
+
+            display:
+                block;
+
+            color:
+                #555;
+
+            font-size:
+                8px;
+
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .contact-item span {
+
+            color:
+                #aaa;
+
+            font-size:
+                13px;
+        }
+
+
+        .contact-item strong {
+
+            color:
+                #555;
+        }
+
+
+
+        .contact-form {
+
+            max-width:
+                900px;
+
+            margin-top:
+                100px;
+
+            padding-top:
+                60px;
+
+            border-top:
+                1px solid #222;
+        }
+
+
+        .contact-form h3 {
+
+            font-family:
+                var(--heading);
+
+            font-size:
+                30px;
+
+            margin-bottom:
+                40px;
+        }
+
+
+        .form-row {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                20px;
+        }
+
+
+        .input-group {
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .input-group label {
+
+            display:
+                block;
+
+            color:
+                #666;
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .input-group input,
+        .input-group textarea {
+
+            width:
+                100%;
+
+            background:
+                transparent;
+
+            color:
+                white;
+
+            border:
+                none;
+
+            border-bottom:
+                1px solid #333;
+
+            padding:
+                14px 0;
+
+            outline:
+                none;
+
+            font-size:
+                14px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+
+            border-color:
+                white;
+        }
+
+
+        .input-group input::placeholder,
+        .input-group textarea::placeholder {
+
+            color:
+                #444;
+        }
+
+
+        #formMessage {
+
+            color:
+                #777;
+
+            font-size:
+                12px;
+
+            margin-top:
+                20px;
+        }
+
+
+        footer {
+
+            padding:
+                60px 0;
+
+            background:
+                #030303;
+
+            border-top:
+                1px solid #1a1a1a;
+        }
+
+
+        .footer-container {
+
+            max-width:
+                var(--max);
+
+            margin:
+                auto;
+
+            padding:
+                0 30px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                50px;
+        }
+
+
+        .footer-brand p {
+
+            color:
+                #555;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.7;
+
+            margin-top:
+                15px;
+        }
+
+
+        .footer-links {
+
+            display:
+                flex;
+
+            justify-content:
+                flex-end;
+
+            gap:
+                25px;
+        }
+
+
+        .footer-links a {
+
+            color:
+                #666;
+
+            font-size:
+                10px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .footer-links a:hover {
+
+            color:
+                white;
+        }
+
+
+        .footer-bottom {
+
+            grid-column:
+                1 / -1;
+
+            padding-top:
+                30px;
+
+            border-top:
+                1px solid #151515;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            color:
+                #444;
+
+            font-size:
+                9px;
+        }
+
+
+
+        .reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(40px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        .reveal.active {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+
+
+        @media (max-width:1000px) {
+
+            .hero-container {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .code-window {
+
+                max-width:
+                    700px;
+            }
+
+
+            .about-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .backend-points {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .contact-wrapper {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (max-width:700px) {
+
+            .nav-links,
+            .nav-button {
+
+                display:
+                    none;
+            }
+
+
+            .menu-button {
+
+                display:
+                    block;
+            }
+
+
+            .nav-links.mobile-active {
+
+                display:
+                    flex;
+
+                position:
+                    absolute;
+
+                top:
+                    80px;
+
+                left:
+                    0;
+
+                width:
+                    100%;
+
+                padding:
+                    30px;
+
+                flex-direction:
+                    column;
+
+                background:
+                    #080808;
+
+                border-bottom:
+                    1px solid #222;
+            }
+
+
+            .hero-container {
+
+                padding-top:
+                    130px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    60px;
+
+                letter-spacing:
+                    -4px;
+            }
+
+
+            .code-window {
+
+                transform:
+                    none;
+            }
+
+
+            .section {
+
+                padding:
+                    100px 0;
+            }
+
+
+            .section-heading {
+
+                margin-bottom:
+                    50px;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .about-stats {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .form-row {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns:
+                    50px 1fr;
+
+                gap:
+                    20px;
+            }
+
+
+            .footer-container {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .footer-links {
+
+                justify-content:
+                    flex-start;
+
+                flex-wrap:
+                    wrap;
+            }
+
+
+            .footer-bottom {
+
+                grid-column:
+                    auto;
+
+                flex-direction:
+                    column;
+
+                gap:
+                    10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home"
+           class="logo">
+
+            Developer<span>.</span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#journey">
+                Journey
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="#contact"
+           class="nav-button">
+
+            Let's Talk
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<section
+    class="hero"
+    id="home">
+
+
+    <div class="hero-bg"></div>
+
+
+    <div class="hero-container">
+
+
+        <div class="hero-content reveal">
+
+
+            <p class="hero-small">
+
+                HELLO, I'M
+
+            </p>
+
+
+            <h1>
+
+                Rohith
+
+                <span>
+                
+                </span>
+
+            </h1>
+
+
+            <div class="hero-role">
+
+                <span id="typingText"></span>
+
+                <span class="cursor">
+                    |
+                </span>
+
+            </div>
+
+
+            <p class="hero-description">
+
+                Mechanical Engineering graduate
+                transitioning into software development,
+                with a strong interest in frontend and now learning about backend engineering,
+                APIs, databases and scalable software systems.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="#projects"
+                   class="primary-button">
+
+                    View Projects
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <a href="#contact"
+                   class="secondary-button">
+
+                    Contact Me
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CODE WINDOW -->
+
+        <div class="code-window reveal">
+
+
+            <div class="window-header">
+
+
+                <div class="window-dots">
+
+                    <span></span>
+
+                    <span></span>
+
+                    <span></span>
+
+                </div>
+
+
+                <p>
+                    rohith.js
+                </p>
+
+
+            </div>
+
+
+            <div class="code-content">
+
+
+<pre><span class="purple">const</span> developer = {
+
+  <span class="blue">name</span>:
+    <span class="green">"Rohith "</span>,
+
+  <span class="blue">education</span>:
+    <span class="green">"Mechanical Engineering"</span>,
+
+  <span class="blue">role</span>:
+    
+    <span class="green">"frontend" and "Backend Developer"</span>,
+
+  <span class="blue">languages</span>: [
+    
+    <span class="green">"Html"</span>, 
+    
+    <span class="green">"Css"</span>, 
+    
+    <span class="green">"JavaScript"</span> ,
+    
+    <span class="green">"Java"</span>,
+
+    <span class="green">"Dsa"</span>
+
+
+  ],
+
+  <span class="blue">backend</span>: [
+
+    <span class="green">"Spring Boot"</span>,
+
+    <span class="green">"Node.js"</span>,
+
+    <span class="green">"Express.js"</span>,
+
+    <span class="green">".NET"</span>
+
+  ],
+
+  <span class="blue">database</span>: [
+
+    <span class="green">"MySQL"</span>,
+
+    <span class="green">"MongoDB"</span>
+
+  ]
+
+};</pre>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        <span>
+            SCROLL TO EXPLORE
+        </span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section
+    class="section about"
+    id="about">
+
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+
+            <p class="section-number">
+
+                01 / ABOUT
+
+            </p>
+
+
+            <h2>
+
+                From Mechanical
+
+                <span>
+                    to Software.
+                </span>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <div class="about-text reveal">
+
+
+                <p class="large-text">
+
+                    I am
+                    <strong>
+                        Rohith
+                    </strong>,
+
+                    a Mechanical Engineering graduate
+                    who developed a strong interest in
+                    software development.
+
+                </p>
+
+
+                <p>
+
+                    My current focus is backend and software
+                    development. I enjoy understanding how
+                    applications work behind the scenes —
+                    from APIs and authentication to databases
+                    and server-side logic.
+
+                </p>
+
+
+                <p>
+
+                    I am continuously developing my skills
+                    in Java, Spring Boot, Node.js, Express.js,
+                    JavaScript, React.js, SQL and MongoDB.
+
+                </p>
+
+
+                <p>
+
+                    My engineering background has helped me
+                    develop analytical thinking, problem solving
+                    and a structured approach to learning
+                    technology.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="about-stats reveal">
+
+
+                <div class="stat-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Backend
+                    </h3>
+
+                    <p>
+                        Java,DSa, Spring Boot,
+                        Node.js, Express.js
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Database
+                    </h3>
+
+                    <p>
+                        MySQL & MongoDB
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        APIs
+                    </h3>
+
+                    <p>
+                        REST API & GraphQL
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Security
+                    </h3>
+
+                    <p>
+                        JWT & OAuth
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section
+    class="section skills-section"
+    id="skills">
+
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+
+            <p class="section-number">
+
+                02 / TECHNOLOGIES
+
+            </p>
+
+
+            <h2>
+
+                My Technical
+
+                <span>
+                    Stack.
+                </span>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="skills-grid">
+
+
+            <!-- LANGUAGES -->
+
+            <div class="skill-category reveal">
+
+
+                <div class="category-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Languages
+                </h3>
+
+
+                <div class="skill-list">
+
+
+                    <div class="skill">
+
+                        <span>
+                            Java
+                        </span>
+
+                        <small>
+                            Backend
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <small>
+                            Programming
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <small>
+                            Frontend
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <small>
+                            Frontend
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- BACKEND -->
+
+            <div class="skill-category reveal">
+
+
+                <div class="category-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Backend
+                </h3>
+
+
+                <div class="skill-list">
+
+
+                    <div class="skill">
+
+                        <span>
+                            Spring Boot
+                        </span>
+
+                        <small>
+                            Java
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            Node.js
+                        </span>
+
+                        <small>
+                            Runtime
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            Express.js
+                        </span>
+
+                        <small>
+                            Framework
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            .NET
+                        </span>
+
+                        <small>
+                            Framework
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FRONTEND -->
+
+            <div class="skill-category reveal">
+
+
+                <div class="category-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Frontend
+                </h3>
+
+
+                <div class="skill-list">
+
+
+                    <div class="skill">
+
+                        <span>
+                            React.js
+                        </span>
+
+                        <small>
+                            Library
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <small>
+                            ES6+
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            HTML5
+                        </span>
+
+                        <small>
+                            Markup
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            CSS3
+                        </span>
+
+                        <small>
+                            Styling
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- DATABASE -->
+
+            <div class="skill-category reveal">
+
+
+                <div class="category-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Database
+                </h3>
+
+
+                <div class="skill-list">
+
+
+                    <div class="skill">
+
+                        <span>
+                            MySQL
+                        </span>
+
+                        <small>
+                            SQL
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            MongoDB
+                        </span>
+
+                        <small>
+                            NoSQL
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- API -->
+
+            <div class="skill-category reveal">
+
+
+                <div class="category-number">
+                    05
+                </div>
+
+
+                <h3>
+                    APIs
+                </h3>
+
+
+                <div class="skill-list">
+
+
+                    <div class="skill">
+
+                        <span>
+                            REST API
+                        </span>
+
+                        <small>
+                            API
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            GraphQL
+                        </span>
+
+                        <small>
+                            API
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- AUTH -->
+
+            <div class="skill-category reveal">
+
+
+                <div class="category-number">
+                    06
+                </div>
+
+
+                <h3>
+                    Authentication
+                </h3>
+
+
+                <div class="skill-list">
+
+
+                    <div class="skill">
+
+                        <span>
+                            JWT
+                        </span>
+
+                        <small>
+                            Authentication
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span>
+                            OAuth
+                        </span>
+
+                        <small>
+                            Authorization
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     BACKEND FOCUS
+====================================================== -->
+
+<section
+    class="backend-section">
+
+
+    <div class="container">
+
+
+        <div class="backend-content reveal">
+
+
+            <p class="section-number">
+
+                03 / BACKEND FOCUS
+
+            </p>
+
+
+            <h2>
+
+                Building the logic
+
+                <span>
+                    behind the interface.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                My main area of interest is backend software
+                development. I want to build reliable APIs,
+                secure authentication systems, database-driven
+                applications and scalable server-side systems.
+
+            </p>
+
+
+
+            <div class="backend-points">
+
+
+                <div>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        API Development
+                    </h3>
+
+                    <p>
+
+                        RESTful APIs and GraphQL services
+                        for application communication.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Authentication
+                    </h3>
+
+                    <p>
+
+                        Secure authentication using
+                        JWT and OAuth concepts.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Database Systems
+                    </h3>
+
+                    <p>
+
+                        Working with relational and
+                        NoSQL databases.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+====================================================== -->
+
+<section
+    class="section projects-section"
+    id="projects">
+
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+
+            <p class="section-number">
+
+                04 / PROJECTS
+
+            </p>
+
+
+            <h2>
+
+                Things I'm
+
+                <span>
+                    Building.
+                </span>
+
+            </h2>
+
+
+            <p class="heading-description">
+
+                This section is ready for my upcoming
+                software and backend projects.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project-card reveal">
+
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <span class="project-status">
+                        COMING SOON
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Project Names
+                </h3>
+
+
+                <p>
+
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>
+                        Java
+                    </span>
+
+                    <span>
+                        Spring Boot
+                    </span>
+
+                    <span>
+                        MySQL
+                    </span>
+
+                    <span>
+                        REST API
+                    </span>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="#">
+                        GitHub ↗
+                    </a>
+
+                    <a href="#">
+                        Live Demo ↗
+                    </a>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project-card reveal">
+
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <span class="project-status">
+                        COMING SOON
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Backend Project
+                </h3>
+
+
+                <p>
+
+                    
+
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>
+                        Node.js
+                    </span>
+
+                    <span>
+                        Express.js
+                    </span>
+
+                    <span>
+                        MongoDB
+                    </span>
+
+                    <span>
+                        JWT
+                    </span>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="#">
+                        GitHub ↗
+                    </a>
+
+                    <a href="#">
+                        Live Demo ↗
+                    </a>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project-card reveal">
+
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <span class="project-status">
+                        COMING SOON
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Full Stack Application
+                </h3>
+
+
+                <p>
+
+                    
+
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>
+                        React.js
+                    </span>
+
+                    <span>
+                        Node.js
+                    </span>
+
+                    <span>
+                        MongoDB
+                    </span>
+
+                    <span>
+                        GraphQL
+                    </span>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="#">
+                        GitHub ↗
+                    </a>
+
+                    <a href="#">
+                        Live Demo ↗
+                    </a>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+
+        <div class="project-note reveal">
+
+            <span>
+                +
+            </span>
+
+            <p>
+
+                
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     JOURNEY
+====================================================== -->
+
+<section
+    class="section journey-section"
+    id="journey">
+
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+
+            <p class="section-number">
+
+                05 / JOURNEY
+
+            </p>
+
+
+            <h2>
+
+                My Engineering
+
+                <span>
+                    Journey.
+                </span>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item reveal">
+
+
+                <div class="timeline-number">
+
+                    01
+
+                </div>
+
+
+                <div class="timeline-content">
+
+
+                    <p class="timeline-label">
+
+                        EDUCATION
+
+                    </p>
+
+
+                    <h3>
+
+                        Mechanical Engineering
+
+                    </h3>
+
+
+                    <p>
+
+                        Built a foundation in engineering,
+                        analytical thinking, problem solving
+                        and technical concepts.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="timeline-item reveal">
+
+
+                <div class="timeline-number">
+
+                    02
+
+                </div>
+
+
+                <div class="timeline-content">
+
+
+                    <p class="timeline-label">
+
+                        TRANSITION
+
+                    </p>
+
+
+                    <h3>
+
+                        Discovering Software Development
+
+                    </h3>
+
+
+                    <p>
+
+                        Developed an interest in software
+                        engineering and started learning
+                        programming, web development and
+                        backend technologies.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="timeline-item reveal">
+
+
+                <div class="timeline-number">
+
+                    03
+
+                </div>
+
+
+                <div class="timeline-content">
+
+
+                    <p class="timeline-label">
+
+                        CURRENT FOCUS
+
+                    </p>
+
+
+                    <h3>
+
+                        Backend & Software Development
+
+                    </h3>
+
+
+                    <p>
+
+                        Currently focusing on Java,
+                        Spring Boot, Node.js, APIs,
+                        databases, authentication and
+                        software development.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section
+    class="contact-section"
+    id="contact">
+
+
+    <div class="container">
+
+
+        <div class="contact-wrapper">
+
+
+            <div class="contact-heading reveal">
+
+
+                <p class="section-number">
+
+                    06 / CONTACT
+
+                </p>
+
+
+                <h2>
+
+                    Let's build
+
+                    <span>
+                        something.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    I'm open to software development
+                    opportunities, internships,
+                    collaborations and interesting
+                    projects.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="contact-details reveal">
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:rohithkanagaraj07@gmail.com"
+                    class="contact-item">
+
+
+                    <div class="contact-icon">
+
+                        @
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            EMAIL
+                        </small>
+
+                        <span>
+                            let's talk about ctc
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+                        ↗
+                    </strong>
+
+
+                </a>
+
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+918531812443"
+                    class="contact-item">
+
+
+                    <div class="contact-icon">
+
+                        ☎
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            PHONE
+                        </small>
+
+                        <span>
+                            call me to hire
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+                        ↗
+                    </strong>
+
+
+                </a>
+
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/rohith-kanagaraj-1643b3371/"
+                    target="_blank"
+                    class="contact-item">
+
+
+                    <div class="contact-icon">
+
+                        in
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            LINKEDIN
+                        </small>
+
+                        <span>
+                            Rohith
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+                        ↗
+                    </strong>
+
+
+                </a>
+
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/rohithdevs07"
+                    target="_blank"
+                    class="contact-item">
+
+
+                    <div class="contact-icon">
+
+                        GH
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            GITHUB
+                        </small>
+
+                        <span>
+                            rohithdevs07
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+                        ↗
+                    </strong>
+
+
+                </a>
+
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/rohith_kanagaraj_/"
+                    target="_blank"
+                    class="contact-item">
+
+
+                    <div class="contact-icon">
+
+                        IG
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            INSTAGRAM
+                        </small>
+
+                        <span>
+                            hi there
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+                        ↗
+                    </strong>
+
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form reveal">
+
+
+            <h3>
+
+                Send me a message.
+
+            </h3>
+
+
+            <form id="contactForm">
+
+
+                <div class="form-row">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="your@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Tell me about your project..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button">
+
+                    Send Message
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+            <p id="formMessage"></p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+
+            <a href="#home"
+               class="logo">
+
+                RK<span>.</span>
+
+            </a>
+
+
+            <p>
+
+                Rohith
+
+                <br>
+
+                Backend & Software Developer
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                © 2026 Rohith
+
+            </p>
+
+
+            <p>
+
+                HTML · CSS · JavaScript
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+/* =========================
+   TYPING ANIMATION
+========================= */
+
+
+const typingText =
+    document.getElementById(
+        "typingText"
+    );
+
+
+const roles = [
+
+    "Backend Developer",
+
+    "Software Developer",
+
+    "Java Developer",
+
+    "Node.js Developer",
+
+    "API Developer"
+
+];
+
+
+let roleIndex = 0;
+
+let characterIndex = 0;
+
+let deleting = false;
+
+
+function typeRole() {
+
+
+    const currentRole =
+        roles[roleIndex];
+
+
+    if (!deleting) {
+
+
+        typingText.textContent =
+            currentRole.substring(
+                0,
+                characterIndex + 1
+            );
+
+
+        characterIndex++;
+
+
+        if (
+            characterIndex ===
+            currentRole.length
+        ) {
+
+
+            deleting = true;
+
+
+            setTimeout(
+                typeRole,
+                1500
+            );
+
+
+            return;
+
+        }
+
+
+    } else {
+
+
+        typingText.textContent =
+            currentRole.substring(
+                0,
+                characterIndex - 1
+            );
+
+
+        characterIndex--;
+
+
+        if (
+            characterIndex === 0
+        ) {
+
+
+            deleting = false;
+
+
+            roleIndex++;
+
+
+            if (
+                roleIndex >=
+                roles.length
+            ) {
+
+                roleIndex = 0;
+
+            }
+
+        }
+
+    }
+
+
+    const speed =
+        deleting
+            ? 45
+            : 90;
+
+
+    setTimeout(
+        typeRole,
+        speed
+    );
+
+}
+
+
+typeRole();
+
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+function revealOnScroll() {
+
+
+    const windowHeight =
+        window.innerHeight;
+
+
+    revealElements.forEach(
+        element => {
+
+
+            const elementTop =
+                element.getBoundingClientRect()
+                    .top;
+
+
+            const revealPoint =
+                120;
+
+
+            if (
+                elementTop <
+                windowHeight -
+                revealPoint
+            ) {
+
+
+                element.classList.add(
+                    "active"
+                );
+
+            }
+
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+
+window.addEventListener(
+    "load",
+    revealOnScroll
+);
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+
+const menuButton =
+    document.getElementById(
+        "menuButton"
+    );
+
+
+const navLinks =
+    document.querySelector(
+        ".nav-links"
+    );
+
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+
+        navLinks.classList.toggle(
+            "mobile-active"
+        );
+
+
+    }
+);
+
+
+
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
+
+
+document
+    .querySelectorAll(
+        ".nav-links a"
+    )
+    .forEach(
+        link => {
+
+
+            link.addEventListener(
+                "click",
+                () => {
+
+
+                    navLinks.classList.remove(
+                        "mobile-active"
+                    );
+
+
+                }
+            );
+
+
+        }
+    );
+
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+
+const formMessage =
+    document.getElementById(
+        "formMessage"
+    );
+
+
+contactForm.addEventListener(
+    "submit",
+    function(event) {
+
+
+        event.preventDefault();
+
+
+        const name =
+            document
+                .getElementById("name")
+                .value
+                .trim();
+
+
+        const email =
+            document
+                .getElementById("email")
+                .value
+                .trim();
+
+
+        const message =
+            document
+                .getElementById("message")
+                .value
+                .trim();
+
+
+        if (
+            name === "" ||
+            email === "" ||
+            message === ""
+        ) {
+
+
+            formMessage.textContent =
+                "Please fill in all fields.";
+
+
+            return;
+
+        }
+
+
+        formMessage.textContent =
+            "Thank you! Your message has been submitted.";
+
+
+        contactForm.reset();
+
+
+    }
+);
+
+
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+const navItems =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+
+        let currentSection = "";
+
+
+        sections.forEach(
+            section => {
+
+
+                const sectionTop =
+                    section.offsetTop -
+                    150;
+
+
+                const sectionHeight =
+                    section.offsetHeight;
+
+
+                if (
+                    window.scrollY >=
+                    sectionTop &&
+
+                    window.scrollY <
+                    sectionTop +
+                    sectionHeight
+                ) {
+
+
+                    currentSection =
+                        section.getAttribute(
+                            "id"
+                        );
+
+                }
+
+
+            }
+        );
+
+
+        navItems.forEach(
+            link => {
+
+
+                link.style.color =
+                    "#888";
+
+
+                if (
+                    link.getAttribute(
+                        "href"
+                    ) ===
+                    "#" +
+                    currentSection
+                ) {
+
+
+                    link.style.color =
+                        "#fff";
+
+                }
+
+
+            }
+        );
+
+
+    }
+);
+
+
+
+/* =========================
+   PROJECT 3D EFFECT
+========================= */
+
+
+const projectCards =
+    document.querySelectorAll(
+        ".project-card"
+    );
+
+
+projectCards.forEach(
+    card => {
+
+
+        card.addEventListener(
+            "mousemove",
+            event => {
+
+
+                const rect =
+                    card.getBoundingClientRect();
+
+
+                const x =
+                    event.clientX -
+                    rect.left;
+
+
+                const y =
+                    event.clientY -
+                    rect.top;
+
+
+                const rotateX =
+                    ((y / rect.height) -
+                    0.5) * -4;
+
+
+                const rotateY =
+                    ((x / rect.width) -
+                    0.5) * 4;
+
+
+                card.style.transform =
+                    `perspective(800px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     translateY(-5px)`;
+
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+
+                card.style.transform =
+                    "perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0)";
+
+
+            }
+        );
+
+
+    }
+);
+
+
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+
+document
+    .querySelectorAll(
+        'a[href^="#"]'
+    )
+    .forEach(
+        anchor => {
+
+
+            anchor.addEventListener(
+                "click",
+                function(event) {
+
+
+                    const target =
+                        document.querySelector(
+                            this.getAttribute(
+                                "href"
+                            )
+                        );
+
+
+                    if (target) {
+
+
+                        event.preventDefault();
+
+
+                        target.scrollIntoView({
+
+                            behavior:
+                                "smooth"
+
+                        });
+
+
+                    }
+
+
+                }
+            );
+
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+</html>
